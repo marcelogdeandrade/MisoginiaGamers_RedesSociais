@@ -232,8 +232,8 @@ def reset_edge_colors(g):
         g.edges[e[0], e[1]]['color'] = edge_color
 
 
-def reset_positions(g):
-    layout = networkx.spring_layout(g)
+def reset_positions(g, weight_string):
+    layout = networkx.spring_layout(g, weight = weight_string)
 
     _set_layout(g, layout)
 
